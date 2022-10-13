@@ -1,11 +1,11 @@
 /**
-*main-entry
-*Description:'the program's description'
-*Return:0 success
+*main- entry point
+*Description:' the program's description'
+*Return: always 0 success
 */
 #include<stdio.h>
 int main(void)
 {
-  printf("with proper grammar, but the outcome is a piece of art,\n");
-  return (0);
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+	return (0);
 }
