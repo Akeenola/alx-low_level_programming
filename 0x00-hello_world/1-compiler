@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -C $CFILE task1.c -o task1.o
+gcc -c $CFILE task1.c
