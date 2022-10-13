@@ -2,9 +2,9 @@
  *to check
  *level of expertise
  */
-#include(std.io)
+#include<stdio.h>
 int main(void)
 {
-  print("Enjoy the task to ");
-  return 0;
+  printf("Enjoy the task to ");
+  return (0);
 }
