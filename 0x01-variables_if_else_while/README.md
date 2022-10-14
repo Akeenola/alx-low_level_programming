@@ -1,0 +1,1 @@
+task 1: working on random numbers using conditional statement, betty as a guide on fformat
