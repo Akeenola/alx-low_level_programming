@@ -7,7 +7,7 @@
 int	main(void)
 {
 int	n;
-n	=	rand()%99;
+n	=	rand()%199-99;
 if	(n	>	0)
     printf("%d is  positive",	n);
 else	if	(n	==	0)
