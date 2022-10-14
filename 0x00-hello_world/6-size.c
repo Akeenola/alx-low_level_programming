@@ -1,7 +1,7 @@
 /**
 *main-entry point
 *Description:'the program's description'
-*return:0 successul
+*Return:Always 0 successul
 */
 #include<stdio.h>
 int	main(void)
