@@ -8,11 +8,10 @@
 int	main(void)
 {
 int	n;
-/*int	min	=	-99;
-int	max	=	99;
-*/
+int	min	=	-100;
+int	max	=	100;
 srand( time(0));
-n	=rand()-RAND_MAX/2;
+n	=	(rand() % (max - min +1)) + min;
 if	(n	>	0)
     printf("%d is  positive",	n);
 else	if	(n	==	0)
