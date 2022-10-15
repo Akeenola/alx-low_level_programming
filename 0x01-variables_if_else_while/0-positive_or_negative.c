@@ -8,8 +8,9 @@
 int	main(void)
 {
 int	n;
-int	min	=	-99;
+/*int	min	=	-99;
 int	max	=	99;
+*/
 srand( time(0));
 n	=rand()-RAND_MAX/2;
 if	(n	>	0)
