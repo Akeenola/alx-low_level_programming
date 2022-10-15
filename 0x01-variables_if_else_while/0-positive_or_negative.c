@@ -4,10 +4,14 @@
 */
 #include<stdio.h>
 #include<stdlib.h>
+#include<time.h>
 int	main(void)
 {
 int	n;
-n	=	rand()%199-99;
+int	min	=	-99;
+int	max	=	99;
+srand( time(0));
+n	=	min + rand()%( max - min + 1 );
 if	(n	>	0)
     printf("%d is  positive",	n);
 else	if	(n	==	0)
