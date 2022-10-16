@@ -1,0 +1,19 @@
+/**
+*main-'describe main program'
+*return:0 successfully
+*/
+#include<stdio.h>
+int main(void)
+{
+  char alpha = 'a';
+  while (alpha	<=	'z')
+    {
+      putchar(alpha);
+      alpa++;
+
+
+
+    }
+  puchar('\n');
+  return (0);
+}
