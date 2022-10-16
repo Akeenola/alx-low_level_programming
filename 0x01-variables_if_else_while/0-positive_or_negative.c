@@ -14,7 +14,7 @@ if	(n	>	0)
     printf("%i is  positive",	n%100);
 else	if	(n	==	0)
     printf("%i is zero",	n);
-else
+ else	if	(n	<	0)
     printf("%i is negative",	n%100);
  return	(0);
 }
