@@ -6,12 +6,12 @@
 #include<stdio.h>
 int main(void)
 {
-	int	n
-	n	=	0;
-	while	(n	<=	9)
+	int	n;
+	n	=	'0';
+	while	(n	<=	'9')
 	{
-		putchar('0'	+	n);
-		if	(n	!=	9)
+		putchar(n);
+		if	(n	!=	'9')
 		{
 			putchar(',');
 			putchar(' ');
