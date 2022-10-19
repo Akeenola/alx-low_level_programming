@@ -1,0 +1,4 @@
+/**
+ *header-to create prototype
+ */
+void _putchar(void);
