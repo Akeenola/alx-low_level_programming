@@ -1,8 +1,7 @@
 /**
  *header-to create prototype
  */
-#include<stdio.h>
-void _putchar(char a)
-{
-  putchar(a);
-}
+#ifndef MAIN_H
+#define MAIN_H
+void _putchar(char);
+#endif
