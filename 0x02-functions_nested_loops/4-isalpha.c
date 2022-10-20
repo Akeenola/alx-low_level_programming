@@ -12,9 +12,11 @@ int	_isalpha(int c)
 	while	(a	<	'z')
 	{
 		if	(c	==	a	||	c	==	b)
+		{
 			return	(1);
-			a++;
-			b++;
+		}
+		a++;
+		b++;
 	}
 	return	(0);
 }
