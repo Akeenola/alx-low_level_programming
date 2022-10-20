@@ -1,0 +1,20 @@
+#include"main.h"
+/**
+*_isalpha - alphabet cases
+*
+*c - int argument
+*/
+
+int	_isalpha(int c)
+{
+	char	a	=	'a';
+	char	b	=	'A';
+	while	(a	<	'z')
+    {
+      if	(c	==	a	||	c	==	b)
+		return	(1);
+		a++;
+		b++;
+    }
+	return	(0);
+}
