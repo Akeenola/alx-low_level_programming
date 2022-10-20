@@ -1,5 +1,5 @@
 #include"main.h"
-int void main(void)
+int	main(void)
 {
   int i;
   i	=	0;
