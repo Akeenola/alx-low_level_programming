@@ -1,0 +1,32 @@
+#include<string.h>
+/**
+ *leet - function name
+ *
+ *Return:Always @tmp
+ *
+ * @str: parameter
+ */
+char	*leet(char	*str)
+{
+	int	len;
+	int	i;
+	char	*tmp;
+	len	=	strlen(str);
+	tmp	=	str;
+	for	(i	=	0;	i	<	len;	i++)
+	{
+		if	(str[i]	==	'a'	||	str[i]	==	'A')
+			tmp[i]	=	'4';
+		else if	(str[i]	==	'e'	||	str[i]	==	'E')
+			tmp[i]	=	'3';
+		else if	(str[i]	==	'o'	||	str[i]	==	'O')
+			tmp[i]	=	'0';
+		else if	(str[i]	==	't'	||	str[i]	==	'T')
+			tmp[i]	=	'7';
+		else if	(str[i]	==	'l'	||	str[i]	==	'L')
+			tmp[i]	=	'1';
+		else
+			tmp[i]	=	str[i];
+	}
+	return	(tmp);
+}
