@@ -13,22 +13,24 @@ char	*rot13(char	*str)
 	char	*tmp;
 	int	len;
 	int	i;
+	int	j;
+	char	*first;
+	char	*second;
 	tmp	=	str;
 	len	=	strlen(str);
+	first	=	"ABCDEFGHIJKLMabcdefghijklm";
+	second	=	"NOPQRSTUVWXYZnopqrstuvwxyz";
 	for	(i	=	0;	i	<	len;	i++)
 	{
-		if	((str[i]	>=	'a'	||	str[i]	>=	'A')	&&	(str[i]	<=	'm'	||	str[i]	<=	'M'))
+		for	(j	=	0;	j	<	26;	j++)
 		{
-			str[i]	=	str[i]	+	13;
-			tmp[i]	=	str[i];
+			if	(str[i]	==	first[j])
+				str[i]	=	second[j];
+			else	if	(str[i]	==	second[j])
+				str[i]	=	first[j];
+			else
+				str[i]	=	str[i];
 		}
-		else if	((str[i]	<=	'z'	||	str[i]	<=	'Z')	&&	(str[i]	>=	'o'	||	str[i]	>=	'O'))
-		{
-			str[i]	=	str[i]	-	13;
-			tmp[i]	=	str[i];
-		}
-		else
-			tmp[i]	=	str[i];
-		}
+	}
 	return	(tmp);
 }
