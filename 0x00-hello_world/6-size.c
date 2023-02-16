@@ -1,9 +1,8 @@
+#include	<stdio.>
 /**
-*main - Entry point
-*Description: 'the program's description'
+*main - main program
 *Return: Always 0 (Success)
 */
-#include<stdio.h>
 int	main(void)
 {
 	int	p;
