@@ -1,9 +1,10 @@
-/**
- *main- ' program to print _putchar'
- *
- *Return: 0 successful
- */
 #include"main.h"
+
+/**
+ * Task0 - Print putchar
+ *
+ * Return: void
+ */
 int	main(void)
 {
 	char 	show[]	=	"_putchar";
