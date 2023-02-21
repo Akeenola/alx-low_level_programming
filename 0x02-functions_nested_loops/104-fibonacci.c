@@ -1,7 +1,7 @@
 /*
  * File: 104-fibonnaci.c
- * Auth: Brennan D Barban
- */
+ * Auth: Akeenola
+*/
 
 #include <stdio.h>
 
