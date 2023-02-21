@@ -1,11 +1,16 @@
+#include "main.h"
 /**
- *_abs - calculate absoute value
- *
- *a: for the argument
+ * _abs - returns absolute value of an int
+ * @n: integer from which to get an absolute value
+ * Return: Void.
  */
-#include <stdlib.h>
-#include"main.h"
-int	 _abs(int	a)
+
+int _abs(int n)
 {
-  return	(abs(a));
+
+	if (n < 0)
+	{
+		return (n * -1);
+	}
+	return (n);
 }
