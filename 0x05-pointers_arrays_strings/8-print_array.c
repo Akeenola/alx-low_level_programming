@@ -1,11 +1,12 @@
 #include"main.h"
 #include<stdio.h>
+
 /**
  *print_array - function name
  *
- * @a : parameter
+ * @a : pointer to array
  *
- * @b : parameter
+ * @n : parameter
  */
 void	print_array(int	*a,	int	n)
 {

@@ -1,10 +1,12 @@
 #include"main.h"
 #include<string.h>
+
 /**
  *puts_half - function declaration
  *
  * @str : parameter
- */
+*/
+
 void	puts_half(char	*str)
 {
 	int	len	=	strlen(str);
