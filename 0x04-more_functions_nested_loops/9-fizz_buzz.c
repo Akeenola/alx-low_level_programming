@@ -1,22 +1,27 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- *main: mainn program
+ *main - replace multiples of 3 and 5.
  *
- *Return- 0 successful
+ *Return: 0.
  */
-int	main(void)
+int main(void)
 {
-	int	i;
-	for	(i	=	1;	i	<=	100;	i++)
+	int i;
+
+	for (i = 1; i <= 100; i++)
 	{
-		if	((i	%	3	==	0)	&&	(i	%	5	==	0))
-		  printf("%s%s",	"FizzBuzz",	" ");
-		else	if(i	%	5	==	0)
-			printf("%s%s",	"Buzz",	" ");
-		else if	(i	%	3	==	0)
-		  printf("%s%s",	"Fizz",	" ");
+		if (i % 3 == 0 &&  i % 5 == 0)
+			printf("%s", "FizzBuzz");
+		else if (i % 3 == 0)
+			printf("%s", "Fizz");
+		else if (i % 5 == 0)
+			printf("%s", "Buzz");
 		else
-			printf("%d%s",	i	,	" ");
+			printf("%d", i);
+		if (i != 100)
+			printf(" ");
 	}
-	return	(0);
+	printf("\n");
+	return (0);
 }
