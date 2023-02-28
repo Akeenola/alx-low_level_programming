@@ -1,137 +1,36 @@
-#include<stdlib.h>
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-#include <math.h>
+
 /**
- * keygen - main function
+ * main - generates random valid passwords
  *
- *Return : 0 on successful
+ * Return: Always 0
  */
-void randomPasswordGeneration(int N);
-int	main(void)
+
+int main(void)
 {
-  // be generated
-  
-  int N = 10;
-  
+	char k[200];
+	int num = 0;
+	int random = 0;
+	char *key = k;
 
-  
-  // Function Call
-  
-  randomPasswordGeneration(N);
-  
+	srand(time(NULL));
 
-  
-  return 0;
-}
-void randomPasswordGeneration(int N)
-  
-{
-  
-  // Initialize counter
-  
-  int i = 0;
-  
+	while (num < 2645)
+	{
+		random = rand() % 122;
 
-  
-  int randomizer = 0;
-  
+		if (random > 32)
+		{
+			*key = random;
+			key = key + 1;
+			num += random;
+		}
+	}
 
-  
-  // Seed the random-number generator
-  
-  // with current time so that the
-  
-  // numbers will be different every time
-  
-  srand((unsigned int)(time(NULL)));
-  
-
-  
-  // Array of numbers
-  
-  char numbers[] = "0123456789";
-  
-
-  
-  // Array of small alphabets
-  
-  char letter[] = "abcdefghijklmnoqprstuvwyzx";
-  
-
-  
-  // Array of capital alphabets
-  
-  char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
-  
-
-  
-  // Array of all the special symbols
-  
-  char symbols[] = "!@#$^&*?";
-  
-
-  
-  // Stores the random password
-  
-  char password[N];
-  
-
-  
-  // To select the randomizer
-  
-  // inside the loop
-  
-  randomizer = rand() % 4;
-  
-
-  
-  // Iterate over the range [0, N]
-  
-  for (i = 0; i < N; i++) {
-    
-
-    
-    if (randomizer == 1) {
-      
-      password[i] = numbers[rand() % 10];
-      
-      randomizer = rand() % 4;
-      
-      printf("%c", password[i]);
-      
-    }
-    
-    else if (randomizer == 2) {
-      
-      password[i] = symbols[rand() % 8];
-      
-      randomizer = rand() % 4;
-      
-      printf("%c", password[i]);
-      
-    }
-    
-    else if (randomizer == 3) {
-      
-      password[i] = LETTER[rand() % 26];
-      
-      randomizer = rand() % 4;
-      
-      printf("%c", password[i]);
-      
-    }
-    
-    else {
-      
-      password[i] = letter[rand() % 26];
-      
-      randomizer = rand() % 4;
-      
-      printf("%c", password[i]);
-      
-    }
-    
-  }
-  
+	*key = (2772 - num);
+	*(key + 1) = '\n';
+	printf("%s", k);
+	return (0);
 }
