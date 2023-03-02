@@ -1,32 +1,31 @@
-#include<string.h>
+include "holberton.h"
+
 /**
- *leet - function name
- *
- *Return:Always @tmp
- *
- * @str: parameter
+ * leet - Encodes a string into 1337
+ * @c: String of variable pointer
+ * Return: String that is encoded
  */
-char	*leet(char	*str)
+
+char *leet(char *c)
 {
-	int	len;
-	int	i;
-	char	*tmp;
-	len	=	strlen(str);
-	tmp	=	str;
-	for	(i	=	0;	i	<	len;	i++)
+	char *cp = c;
+	char key[] = {'A', 'E', 'O', 'T', 'L'};
+	int value[] = {4, 3, 0, 7, 1};
+	unsigned int i;
+
+	while (*c)
 	{
-		if	(str[i]	==	'a'	||	str[i]	==	'A')
-			tmp[i]	=	'4';
-		else if	(str[i]	==	'e'	||	str[i]	==	'E')
-			tmp[i]	=	'3';
-		else if	(str[i]	==	'o'	||	str[i]	==	'O')
-			tmp[i]	=	'0';
-		else if	(str[i]	==	't'	||	str[i]	==	'T')
-			tmp[i]	=	'7';
-		else if	(str[i]	==	'l'	||	str[i]	==	'L')
-			tmp[i]	=	'1';
-		else
-			tmp[i]	=	str[i];
+		for (i = 0; i < sizeof(key) / sizeof(char); i++)
+		{
+			/*32 is the difference between lower case letters and apper case letters*/
+			if (*c == key[i] || *c == key[i] + 32)
+			{
+				*c = 48 + value[i];
+			}
+		}
+		c++;
 	}
-	return	(tmp);
+
+	return (cp);
+
 }
