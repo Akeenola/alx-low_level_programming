@@ -2,11 +2,11 @@
 #include"main.h"
 #include<string.h>
 /**
- * string_toupper - function name
+ * *string_toupper - changes all lowercase letters of a string to upper
  *
- * Return: Always @tmp
+ * @tmp: String to return
  *
- * @tmp: parameter
+ * Return: String
  */
 char	*string_toupper(char	*tmp)
 {
