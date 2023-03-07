@@ -8,24 +8,64 @@
  *
  * @str - parameter
  */
-char	*cap_string(char	*str)
+/**
+ * isLower - Determines whether ascii is lowercase
+ *
+ * @c: Character
+ *
+ * Return: 1 if true, 0 if false
+ */
+
+int isLower(char c)
 {
-	int	len	=	strlen(str);
-	int	i;
-	for	(i	=	0;	i	<	len;	i++)
+	return (c >= 97 && c <= 122);
+}
+
+/**
+ * isDelimiter - Determines whether ascii is a delimiter
+ *
+ * @c: Character
+ *
+ * Return: 1 if true, 0 if false
+ */
+
+int isDelimiter(char c)
+{
+	int i;
+	char delimiter[] = " \t\n,.!?\"(){}";
+
+	for (i = 0; i < 12; i++)
+		if (c == delimiter[i])
+			return (1);
+
+	return (0);
+}
+
+/**
+ * cap_string - Capitalizes all words of a string
+ *
+ * @s: Input string
+ *
+ * Return: string with capitalized words
+ */
+
+char *cap_string(char *s)
+{
+	char *ptr = s;
+	int foundDelimit = 1;
+
+	while (*s)
 	{
-		if ((str[i - 1]	== ' ' || str[i - 1] == '\n'	|| str[i - 1] == '\t' || str[i - 1] == ','	|| str[i - 1] == ';' || str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' || str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' || str[i - 1] == '}' || str[i - 1] == '.') && (str[i] >= 'a' && str[i] <= 'z'))
+		if (isDelimiter(*s))
+			foundDelimit = 1;
+		else if (isLower(*s) && foundDelimit)
 		{
-			str[i]	=	str[i] - 32;
-		}
-		else if ((str[0] >= 97 && str[0] <= 122))
-		{
-			str[0]	=	str[0] - 32;
+			*s -= 32;
+			foundDelimit = 0;
 		}
 		else
-		{	  
-			str[i]	=	str[i];
-		}
+			foundDelimit = 0;
+		s++;
 	}
-	return	(str);
+	return (ptr);
 }
