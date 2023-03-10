@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - prints the number of arguments passed into it
  * @argc: number of command line arguments
@@ -10,7 +9,8 @@
 int main(int argc, char *argv[])
 {
 	int i;
-        (void)argv;
+
+	(void)argv;
 	i = 0;
 	while (i < argc - 1)
 		i++;
