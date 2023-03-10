@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int i;
-
+        (void)argv;
 	i = 0;
 	while (i < argc - 1)
 		i++;
