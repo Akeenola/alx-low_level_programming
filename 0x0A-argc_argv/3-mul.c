@@ -1,32 +1,31 @@
-#include "main.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - Entry point
+ * main - multiplies two numbers
+ * @argc: number of command line arguments
+ * @argv: array of the command line arguments
  *
- * @argc: Length of @argv
- *
- * @argv: Array of strings of the arguments of this program
- *
- * Return: 0, Success
+ * Return: Always 0.
+ * 1 when there is an error
  */
-
 int main(int argc, char *argv[])
 {
+	int i, prod;
+
+	prod = 1;
 	if (argc == 3)
 	{
-		print_number(multiply_two_nums(_atoi(argv[1]), _atoi(argv[2])));
-		_putchar('\n');
-		return (0);
+		for (i = 1; i < argc; i++)
+		{
+			prod *= atoi(argv[i]);
+		}
+		printf("%d\n", prod);
 	}
 	else
 	{
-		_putchar('E');
-		_putchar('r');
-		_putchar('r');
-		_putchar('o');
-		_putchar('r');
-		_putchar('\n');
-		return (0);
+		printf("Error\n");
+		return (1);
 	}
+	return (0);
 }
