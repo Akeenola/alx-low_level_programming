@@ -6,4 +6,6 @@
 #define MAIN_H
 void _putchar(char);
 void print_array_elements(char *str);
+
+int _atoi(char *s);
 #endif
