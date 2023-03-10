@@ -1,7 +1,5 @@
 #include "main.h"
 
-void print_array_elements(char *str);
-
 /**
  * main - Prints all arguments it receives
  *
