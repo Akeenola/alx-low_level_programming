@@ -1,14 +1,24 @@
-#include "main.h"
-#include <ctype.h>
-
 /**
- * _islower - if the character is lowercase
- * @c:  is the int that will use for the argument of the function
- * Return: 1 if lowercase character 0 if not
+ *_islower - program to code leter cases
+ *
+ *c- char c
  */
-int _islower(int c)
+#include"main.h"
+int	_islower(int c)
 {
-	if (islower(c))
-		return (1);
-	return (0);
+	char	l	=	'a';
+	int	d;
+	while	(l	<	'z')
+	{
+		l++;
+		if	(c	==	l)
+		{
+			d	=	0;
+			break;
+		}
+	}
+	if	(d	==	0)
+		return	(1);
+	else
+		return	(0);
 }

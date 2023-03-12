@@ -1,9 +1,15 @@
 /**
+
  *_putchar-ptint characters
+
  *
+
  *a-received arg
+
  *
+
  *char-argument type
+
  */
 
 
@@ -16,11 +22,7 @@
 
 
 
-void _putchar(char);
-
-
-
-void _putchar(char a)
+int	 _putchar(char a)
   
 
   
@@ -28,7 +30,7 @@ void _putchar(char a)
   
 
   
-  putchar(a);
+	return	putchar(a);
   
 
   
