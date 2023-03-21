@@ -1,4 +1,4 @@
-#ifndef ABX
-#define	ABX
-#define	ABX(x)	(((x) <(0))?(-(x)):(x))
+#ifndef ABSX
+#define	ABSX
+#define	ABSX(x)	(((x) <(0))?(-(x)):(x))
 #endif
