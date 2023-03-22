@@ -1,22 +1,3 @@
-
-mubareksd
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-alx-low_level_programming/0x0E-structures_typedef/dog.h
-@mubareksd
-mubareksd 1. A dog is the only thing on earth that loves you more than you love…
-…
- 1 contributor
-23 lines (22 sloc)  471 Bytes
 #ifndef DOG_H
 #define DOG_H
 /**
