@@ -1,24 +1,42 @@
-#ifndef _HEADER_
-#define _HEADER_
 
+mubareksd
+/
+alx-low_level_programming
+Public
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+alx-low_level_programming/0x0E-structures_typedef/dog.h
+@mubareksd
+mubareksd 1. A dog is the only thing on earth that loves you more than you love…
+…
+ 1 contributor
+23 lines (22 sloc)  471 Bytes
+#ifndef DOG_H
+#define DOG_H
 /**
-  *struct dog - structure of a dog.
-  *@name: name of dog.
-  *@age: age of dog.
-  *@owner: owner of dog.
-  */
-struct dog
+ * struct dog - Dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ * Desc: header file
+ */
+typedef struct dog
 {
-	char *name;
-	float age;
-	char *owner;
-};
-typedef struct dog dog_t;
-
+char *name;
+float age;
+char *owner;
+} dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
+char *_strncpy(char *dest, char *src, int n);
+int _strlen(char *s);
 
-
-#endif /* DOG_H */
+#endif
