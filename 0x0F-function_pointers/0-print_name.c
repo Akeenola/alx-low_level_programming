@@ -1,5 +1,3 @@
-#include "function_pointers.h"
-
 /**
  * print_name- this functions prints a name
  * a blank line
