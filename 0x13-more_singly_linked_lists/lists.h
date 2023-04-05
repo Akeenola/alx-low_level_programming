@@ -2,6 +2,8 @@
 #define MORE_SINGLY_LINKED_LIST_H
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
+
 
 /**
  * struct listint_s - singly linked list
